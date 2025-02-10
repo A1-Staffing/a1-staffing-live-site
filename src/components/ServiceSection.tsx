@@ -68,7 +68,7 @@ const ServiceSection: React.FC = () => {
             </p>
             <a
               href="#"
-              className="inline-block text-[#ffffff] hover:text-white font-bold py-2 px-4 border-2 border-[#02043f] rounded-md mt-8"
+              className="inline-block text-[#ffffff] hover:text-black font-bold py-2 px-4 border-2 border-[#02043f] rounded-md mt-8"
             >
               Read More
             </a>
@@ -90,17 +90,14 @@ const ServiceSection: React.FC = () => {
               />
             </div>
             <h4 className="text-white font-bold text-justify text-xl mb-4 mt-16">
-              Temp And Temp To Perm
+            Direct Hire
             </h4>
             <p className="text-white mb-4 text-sm sm:text-base">
-              For many companies, dedicating their entire recruiting team and
-              substantial resources to find the right candidates for short-term
-              assignments, whether lasting a week or a few months, may not be
-              practical. This is where A1 Staffing Pro steps in.
+            A1 Staffing Pro’s unique &quot;Know Your Client&quot; approach enables our Customer Success Managers to deeply understand our clients’ needs. We thoroughly explore aspects such as required skills, management styles, personalities, company culture, team dynamics.
             </p>
             <a
               href="#"
-              className="inline-block text-[#ffffff] hover:text-white font-bold py-2 px-4 border-2 border-[#02043f] rounded-md mt-8"
+              className="inline-block text-[#ffffff] hover:text-black font-bold py-2 px-4 border-2 border-[#02043f] rounded-md mt-8"
             >
               Read More
             </a>
@@ -122,17 +119,14 @@ const ServiceSection: React.FC = () => {
               />
             </div>
             <h4 className="text-white font-bold text-xl mb-4 mt-16">
-              Temp And Temp To Perm
+            Talent Aquisition Consulting
             </h4>
             <p className="text-white mb-4 text-justify text-sm sm:text-base">
-              For many companies, dedicating their entire recruiting team and
-              substantial resources to find the right candidates for short-term
-              assignments, whether lasting a week or a few months, may not be
-              practical. This is where A1 Staffing Pro steps in.
+            At A1 Staffing Pro, we offer more than just standard staffing solutions. Our Talent Acquisition Consulting services are tailored to enhance your workforce by delivering complete support throughout hiring process.
             </p>
             <a
               href="#"
-              className="inline-block text-[#ffffff] hover:text-white font-bold py-2 px-4 border-2 border-[#02043f] rounded-md mt-8"
+              className="inline-block text-[#ffffff] hover:text-black font-bold py-2 px-4 border-2 border-[#02043f] rounded-md mt-8"
             >
               Read More
             </a>

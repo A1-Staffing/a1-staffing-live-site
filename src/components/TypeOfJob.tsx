@@ -67,7 +67,7 @@ const TypeOfJob: React.FC = () => {
             </p>
             <a
               href="#"
-              className="inline-block text-[#ffffff] hover:text-white font-bold py-2 px-4 border-2 border-[#02043f] rounded-md mt-8"
+              className="inline-block text-[#ffffff] hover:text-black font-bold py-2 px-4 border-2 border-[#02043f] rounded-md mt-8"
             >
               Read More
             </a>
@@ -97,7 +97,7 @@ const TypeOfJob: React.FC = () => {
             </p>
             <a
               href="#"
-              className="inline-block text-[#ffffff] hover:text-white font-bold py-2 px-4 border-2 border-[#02043f] rounded-md mt-8"
+              className="inline-block text-[#ffffff] hover:text-black font-bold py-2 px-4 border-2 border-[#02043f] rounded-md mt-8"
             >
               Read More
             </a>
@@ -128,7 +128,7 @@ const TypeOfJob: React.FC = () => {
             </p>
             <a
               href="#"
-              className="inline-block text-[#ffffff] hover:text-white font-bold py-2 px-4 border-2 border-[#02043f] rounded-md mt-8"
+              className="inline-block text-[#ffffff] hover:text-black font-bold py-2 px-4 border-2 border-[#02043f] rounded-md mt-8"
             >
               Read More
             </a>
@@ -158,7 +158,7 @@ const TypeOfJob: React.FC = () => {
             </p>
             <a
               href="#"
-              className="inline-block text-[#ffffff] hover:text-white font-bold py-2 px-4 border-2 border-[#02043f] rounded-md mt-8"
+              className="inline-block text-[#ffffff] hover:text-black font-bold py-2 px-4 border-2 border-[#02043f] rounded-md mt-8"
             >
               Read More
             </a>
@@ -188,7 +188,7 @@ const TypeOfJob: React.FC = () => {
             </p>
             <a
               href="#"
-              className="inline-block text-[#ffffff] hover:text-white font-bold py-2 px-4 border-2 border-[#02043f] rounded-md mt-8"
+              className="inline-block text-[#ffffff] hover:text-black font-bold py-2 px-4 border-2 border-[#02043f] rounded-md mt-8"
             >
               Read More
             </a>
@@ -220,7 +220,7 @@ const TypeOfJob: React.FC = () => {
             </p>
             <a
               href="#"
-              className="inline-block text-[#ffffff] hover:text-white font-bold py-2 px-4 border-2 border-[#02043f] rounded-md mt-8"
+              className="inline-block text-[#ffffff] hover:text-black font-bold py-2 px-4 border-2 border-[#02043f] rounded-md mt-8"
             >
               Read More
             </a>

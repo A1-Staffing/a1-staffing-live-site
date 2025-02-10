@@ -53,42 +53,50 @@ const ContactUs: React.FC = () => {
 
           {/* Contact Cards */}
           <div className="space-y-4 pr-4 sm:pr-8">
-            {/* Card 1 */}
-            <div className="flex items-center bg-[#7b7d9d] text-white p-2 w-full lg:w-96 h-28 rounded-md">
-              <div className="w-16 h-16 bg-[#d3bea8] rounded-full flex items-center justify-center mr-3">
-                <Image
-                  src="/contact-icon1.png"
-                  alt="Logo"
-                  width={50}
-                  height={50}
-                />
-              </div>
-              <div>
-                <p className="font-bold text-sm flex items-center">
-                  Give us a Call
-                </p>
-                <p className="text-xl">646 419 8100</p>
-              </div>
-            </div>
+  {/* Card 1 */}
+  <div className="flex items-center bg-[#7b7d9d] text-white p-2 w-full lg:w-96 h-28 rounded-md">
+    <div className="w-16 h-16 bg-[#d3bea8] rounded-full flex items-center justify-center mr-3">
+      <Image
+        src="/contact-icon1.png"
+        alt="Logo"
+        width={50}
+        height={50}
+      />
+    </div>
+    <div>
+      <p className="font-bold text-sm flex items-center">
+        Give us a Call
+      </p>
+      <p className="text-xl">
+        <a href="tel:+18889733410" className="text-white hover:underline">
+          888 973 3410
+        </a>
+      </p>
+    </div>
+  </div>
 
-            {/* Card 2 */}
-            <div className="flex items-center bg-[#7b7d9d] text-white p-2 w-full lg:w-96 h-28 rounded-md">
-              <div className="w-16 h-16 bg-[#d3bea8] rounded-full flex items-center justify-center mr-3">
-                <Image
-                  src="/contact-icon2.png"
-                  alt="Logo"
-                  width={50}
-                  height={50}
-                />
-              </div>
-              <div>
-                <p className="font-bold text-sm flex items-center">
-                  Send us Mail
-                </p>
-                <p className="text-xl">info@a1staffingpro.com</p>
-              </div>
-            </div>
-          </div>
+  {/* Card 2 */}
+  <div className="flex items-center bg-[#7b7d9d] text-white p-2 w-full lg:w-96 h-28 rounded-md">
+    <div className="w-16 h-16 bg-[#d3bea8] rounded-full flex items-center justify-center mr-3">
+      <Image
+        src="/contact-icon2.png"
+        alt="Logo"
+        width={50}
+        height={50}
+      />
+    </div>
+    <div>
+      <p className="font-bold text-sm flex items-center">
+        Send us Mail
+      </p>
+      <p className="text-xl">
+        <a href="mailto:info@a1staffingpro.com" className="text-white hover:underline">
+          info@a1staffingpro.com
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
         </div>
       </div>
 

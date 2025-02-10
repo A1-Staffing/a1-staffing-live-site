@@ -36,7 +36,7 @@ const BlogSection: React.FC = () => {
             </div>
             <div className="p-6">
               <div className="flex items-center text-sm text-[#9CA3AF] mb-4">
-                <span className="mr-4">📅 16 August 2023</span>
+                <span className="mr-4">📅 16 August 2024</span>
                 <span>👤 Ben Stokes</span>
               </div>
               <h3 className="text-xl font-bold mb-2">
@@ -67,8 +67,8 @@ const BlogSection: React.FC = () => {
 
             <div className="p-6">
               <div className="flex items-center text-sm text-[#9CA3AF] mb-4">
-                <span className="mr-4">📅 16 August 2023</span>
-                <span>👤 Ben Stokes</span>
+                <span className="mr-4">📅 06 january 2024</span>
+                <span>👤 Steav</span>
               </div>
               <h3 className="text-xl font-bold mb-2">
                 Talent Chronicles: Stories from the Hiring Frontline
@@ -97,8 +97,8 @@ const BlogSection: React.FC = () => {
             </div>
             <div className="p-6">
               <div className="flex items-center text-sm text-[#9CA3AF] mb-4">
-                <span className="mr-4">📅 16 August 2023</span>
-                <span>👤 Ben Stokes</span>
+                <span className="mr-4">📅 16 july 2023</span>
+                <span>👤 Robin</span>
               </div>
               <h3 className="text-xl font-bold mb-2">
                 Recruitology: Where Recruitment Meets Technology
