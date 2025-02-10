@@ -74,10 +74,10 @@ const TypeOfJob: React.FC = () => {
           </div>
 
           {/* Card 2 */}
-          <div
+          {/* <div
             className="bg-[#1c1e53] hover:bg-[#bf0a30] p-6 sm:p-8 rounded-lg relative"
             data-aos="fade-up"
-            style={{ height: 'auto' }} // Ensure the box adapts to content size
+            style={{ height: 'auto' }} 
           >
             <div className="absolute left-1/2 transform -translate-x-1/2 -top-12 bg-white p-2 rounded-full">
               <Image
@@ -85,7 +85,7 @@ const TypeOfJob: React.FC = () => {
                 alt="Logo 2"
                 width={80}
                 height={80}
-                style={{ width: 'auto', height: 'auto' }} // Maintain aspect ratio
+                style={{ width: 'auto', height: 'auto' }}
               />
             </div>
             <h4 className="text-white font-bold text-xl mb-4 mt-16">
@@ -101,7 +101,7 @@ const TypeOfJob: React.FC = () => {
             >
               Read More
             </a>
-          </div>
+          </div> */}
 
           {/* Card 3 */}
           <div
@@ -194,10 +194,10 @@ const TypeOfJob: React.FC = () => {
             </a>
           </div>
           {/* card 6 */}
-          <div
+          {/* <div
             className="bg-[#1c1e53] hover:bg-[#bf0a30] p-6 sm:p-8 rounded-lg relative"
             data-aos="fade-up"
-            style={{ height: 'auto' }} // Ensure the box adapts to content size
+            style={{ height: 'auto' }}
           >
             <div className="absolute left-0 top-0 bg-white p-2 rounded-full">
               <Image
@@ -205,7 +205,7 @@ const TypeOfJob: React.FC = () => {
                 alt="Logo 2"
                 width={80}
                 height={80}
-                style={{ width: 'auto', height: 'auto' }} // Maintain aspect ratio
+                style={{ width: 'auto', height: 'auto' }}
               />
             </div>
 
@@ -224,7 +224,7 @@ const TypeOfJob: React.FC = () => {
             >
               Read More
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
