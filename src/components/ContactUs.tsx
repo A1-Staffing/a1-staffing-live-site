@@ -1,17 +1,21 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
+import Image from "next/image";
 const ContactUs: React.FC = () => {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: '',
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
   });
+
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState("");
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -23,10 +27,39 @@ const ContactUs: React.FC = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form data submitted:', formData);
-    // Handle form submission here (e.g., send it to a server)
+    setLoading(true);
+    setError("");
+    setSuccess(false);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSuccess(true);
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        const data = await response.json();
+        setError(data.error || "Something went wrong!");
+      }
+    } catch (err) {
+      console.error(err); // Log the error
+      setError("Failed to send message.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -53,50 +86,56 @@ const ContactUs: React.FC = () => {
 
           {/* Contact Cards */}
           <div className="space-y-4 pr-4 sm:pr-8">
-  {/* Card 1 */}
-  <div className="flex items-center bg-[#7b7d9d] text-white p-2 w-full lg:w-96 h-28 rounded-md">
-    <div className="w-16 h-16 bg-[#d3bea8] rounded-full flex items-center justify-center mr-3">
-      <Image
-        src="/contact-icon1.png"
-        alt="Logo"
-        width={50}
-        height={50}
-      />
-    </div>
-    <div>
-      <p className="font-bold text-sm flex items-center">
-        Give us a Call
-      </p>
-      <p className="text-xl">
-        <a href="tel:+18889733410" className="text-white hover:underline">
-          888 973 3410
-        </a>
-      </p>
-    </div>
-  </div>
+            {/* Card 1 */}
+            <div className="flex items-center bg-[#7b7d9d] text-white p-2 w-full lg:w-96 h-28 rounded-md">
+              <div className="w-16 h-16 bg-[#d3bea8] rounded-full flex items-center justify-center mr-3">
+                <Image
+                  src="/contact-icon1.png"
+                  alt="Logo"
+                  width={50}
+                  height={50}
+                />
+              </div>
+              <div>
+                <p className="font-bold text-sm flex items-center">
+                  Give us a Call
+                </p>
+                <p className="text-xl">
+                  <a
+                    href="tel:+18889733410"
+                    className="text-white hover:underline"
+                  >
+                    888 973 3410
+                  </a>
+                </p>
+              </div>
+            </div>
 
-  {/* Card 2 */}
-  <div className="flex items-center bg-[#7b7d9d] text-white p-2 w-full lg:w-96 h-28 rounded-md">
-    <div className="w-16 h-16 bg-[#d3bea8] rounded-full flex items-center justify-center mr-3">
-      <Image
-        src="/contact-icon2.png"
-        alt="Logo"
-        width={50}
-        height={50}
-      />
-    </div>
-    <div>
-      <p className="font-bold text-sm flex items-center">
-        Send us Mail
-      </p>
-      <p className="text-xl">
-        <a href="mailto:info@a1staffingpro.com" className="text-white hover:underline">
-          info@a1staffingpro.com
-        </a>
-      </p>
-    </div>
-  </div>
-</div>
+            {/* Card 2 */}
+            <div className="flex items-center bg-[#7b7d9d] text-white p-2 w-full lg:w-96 h-28 rounded-md">
+              <div className="w-16 h-16 bg-[#d3bea8] rounded-full flex items-center justify-center mr-3">
+                <Image
+                  src="/contact-icon2.png"
+                  alt="Logo"
+                  width={50}
+                  height={50}
+                />
+              </div>
+              <div>
+                <p className="font-bold text-sm flex items-center">
+                  Send us Mail
+                </p>
+                <p className="text-xl">
+                  <a
+                    href="mailto:info@a1staffingpro.com"
+                    className="text-white hover:underline"
+                  >
+                    info@a1staffingpro.com
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -106,13 +145,7 @@ const ContactUs: React.FC = () => {
           <h3 className="text-[#90acd0] text-2xl font-bold mb-4">
             Send us a Message
           </h3>
-          <p className="text-lg mb-8 text-[#000000]">
-            Feel free to reach out to us with any questions, inquiries, or
-            staffing requirements you may have.
-          </p>
-
           <form onSubmit={handleSubmit}>
-            {/* Name Fields */}
             <div className="flex flex-col lg:flex-row gap-4 mb-6">
               <input
                 type="text"
@@ -121,6 +154,7 @@ const ContactUs: React.FC = () => {
                 className="w-full lg:w-1/2 p-3 border border-gray-300 rounded-md"
                 value={formData.firstName}
                 onChange={handleChange}
+                required
               />
               <input
                 type="text"
@@ -129,10 +163,9 @@ const ContactUs: React.FC = () => {
                 className="w-full lg:w-1/2 p-3 border border-gray-300 rounded-md"
                 value={formData.lastName}
                 onChange={handleChange}
+                required
               />
             </div>
-
-            {/* Email and Phone Fields */}
             <div className="flex flex-col lg:flex-row gap-4 mb-6">
               <input
                 type="email"
@@ -141,6 +174,7 @@ const ContactUs: React.FC = () => {
                 className="w-full lg:w-1/2 p-3 border border-gray-300 rounded-md"
                 value={formData.email}
                 onChange={handleChange}
+                required
               />
               <input
                 type="tel"
@@ -149,10 +183,9 @@ const ContactUs: React.FC = () => {
                 className="w-full lg:w-1/2 p-3 border border-gray-300 rounded-md"
                 value={formData.phone}
                 onChange={handleChange}
+                required
               />
             </div>
-
-            {/* Subject */}
             <div className="mb-6">
               <input
                 type="text"
@@ -161,28 +194,31 @@ const ContactUs: React.FC = () => {
                 className="w-full p-3 border border-gray-300 rounded-md"
                 value={formData.subject}
                 onChange={handleChange}
+                required
               />
             </div>
-
-            {/* Message */}
             <div className="mb-6">
               <textarea
                 name="message"
                 placeholder="Your Message"
-                className="w-full p-3 border border-gray-300 rounded-md"
+                className="w-full p-3 border text-black border-gray-300 rounded-md"
                 rows={4}
                 value={formData.message}
                 onChange={handleChange}
+                required
               />
             </div>
-
-            {/* Submit Button */}
+            {error && <p className="text-red-500 mb-4">{error}</p>}
+            {success && (
+              <p className="text-green-500 mb-4">Message sent successfully!</p>
+            )}
             <div className="flex justify-end">
               <button
                 type="submit"
-                className="bg-[#bf0a30] text-white py-3 px-8 rounded-md hover:bg-[#a4082b]"
+                className="bg-[#bf0a30] text-white py-3 px-8 rounded-md hover:bg-[#a4082b] disabled:bg-gray-500"
+                disabled={loading}
               >
-                Send Message
+                {loading ? "Sending..." : "Send Message"}
               </button>
             </div>
           </form>
