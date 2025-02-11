@@ -7,9 +7,12 @@ export async function POST(req: Request) {
   try {
     const formData = await req.json();
 
+    const emailFrom = process.env.EMAIL_FROM || "default@resend.dev";
+    const emailTo = process.env.EMAIL_TO ? process.env.EMAIL_TO.split(",") : [""];
+
     await resend.emails.send({
-      from: "A1 Staffing <onboarding@resend.dev>",
-      to: ["a1staffingprollc@gmail.com"],
+      from: `A1 Staffing <${emailFrom}>`,
+      to: emailTo,
       subject: "New Employer Form Submission",
       text: `New employer form submission:
       - Name: ${formData.name}
