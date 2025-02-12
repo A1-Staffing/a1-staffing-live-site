@@ -142,7 +142,7 @@ const ContactUs: React.FC = () => {
       {/* Right Div - Form Section */}
       <div className="flex-1 p-6 lg:p-8">
         <div className="w-full max-w-xl bg-white p-8 rounded-md shadow-lg">
-          <h3 className="text-[#90acd0] text-2xl font-bold mb-4">
+          <h3 className="text-[#1e3452] text-2xl font-bold mb-4">
             Send us a Message
           </h3>
           <form onSubmit={handleSubmit}>
@@ -151,7 +151,7 @@ const ContactUs: React.FC = () => {
                 type="text"
                 name="firstName"
                 placeholder="First Name"
-                className="w-full lg:w-1/2 p-3 border border-gray-300 rounded-md"
+                className="w-full lg:w-1/2 p-3 border border-gray-300 text-black rounded-md"
                 value={formData.firstName}
                 onChange={handleChange}
                 required
@@ -160,7 +160,7 @@ const ContactUs: React.FC = () => {
                 type="text"
                 name="lastName"
                 placeholder="Last Name"
-                className="w-full lg:w-1/2 p-3 border border-gray-300 rounded-md"
+                className="w-full lg:w-1/2 p-3 border border-gray-300 text-black rounded-md"
                 value={formData.lastName}
                 onChange={handleChange}
                 required
@@ -171,7 +171,7 @@ const ContactUs: React.FC = () => {
                 type="email"
                 name="email"
                 placeholder="Email"
-                className="w-full lg:w-1/2 p-3 border border-gray-300 rounded-md"
+                className="w-full lg:w-1/2 p-3 border border-gray-300 text-black rounded-md"
                 value={formData.email}
                 onChange={handleChange}
                 required
@@ -180,7 +180,7 @@ const ContactUs: React.FC = () => {
                 type="tel"
                 name="phone"
                 placeholder="Phone No"
-                className="w-full lg:w-1/2 p-3 border border-gray-300 rounded-md"
+                className="w-full lg:w-1/2 p-3 border border-gray-300 text-black rounded-md"
                 value={formData.phone}
                 onChange={handleChange}
                 required
@@ -191,7 +191,7 @@ const ContactUs: React.FC = () => {
                 type="text"
                 name="subject"
                 placeholder="Subject"
-                className="w-full p-3 border border-gray-300 rounded-md"
+                className="w-full p-3 border border-gray-300 text-black rounded-md"
                 value={formData.subject}
                 onChange={handleChange}
                 required
