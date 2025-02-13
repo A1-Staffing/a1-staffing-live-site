@@ -21,8 +21,9 @@ const JobSeekersForm = () => {
     gender: "",
     dob: "",
     captchaInput: "",
+    resume: "", // Add this line
   });
-
+  
   useEffect(() => {
     setCaptcha(generateCaptcha());
   }, []);
@@ -94,6 +95,7 @@ const JobSeekersForm = () => {
           gender: "",
           dob: "",
           captchaInput: "",
+          resume: "", // ✅ Add this line to match the expected type
         });
       } else {
         alert("Failed to send email. Try again later.");
