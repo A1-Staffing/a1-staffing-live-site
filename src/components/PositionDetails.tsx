@@ -131,4 +131,4 @@ const PositionDetails: React.FC<PositionDetailsProps> = ({
   );
 };
 
-export default PositionDetails;
+export default PositionDetails; 

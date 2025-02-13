@@ -14,7 +14,7 @@ const EmployerForm = () => {
     workLocation: "",
     positionType: "Position Type",
     isRemote: false,
-    jobDetails: "",
+    jobDetails: null as File | null, // Store actual file object
     companySector: "Company Sectors",
   });
 
@@ -42,30 +42,34 @@ const EmployerForm = () => {
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
-      setFormData((prevData) => ({ ...prevData, jobDetails: file.name }));
+      setFormData((prevData) => ({ ...prevData, jobDetails: file }));
     }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-  
+
     if (userInput !== captcha) {
       alert("Incorrect CAPTCHA. Please try again.");
       refreshCaptcha();
       return;
     }
-  
+
     try {
+      const data = new FormData();
+      Object.entries(formData).forEach(([key, value]) => {
+        if (value !== null) {
+          data.append(key, value as Blob);
+        }
+      });
+
       const response = await fetch("/api/employer-form", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
+        body: data, // No need to set headers; `FormData` handles it
       });
-  
+
       const result = await response.json();
-      
+
       if (response.ok) {
         alert("Form submitted successfully!");
       } else {
@@ -76,7 +80,6 @@ const EmployerForm = () => {
       alert("An error occurred while submitting the form.");
     }
   };
-  
 
   return (
     <div className="relative pb-8 bg-[#00094a] text-white">
