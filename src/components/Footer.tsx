@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
         <i className="fab fa-x-twitter w-12 h-12 text-blue-500"></i>
       </Link>
       <Link href="https://g.co/kgs/MG8Fg6a" target="_blank">
-        <i className="fas fa-google w-12 h-12 text-red-600"></i>
+        <i className="fas fa-map-marker-alt w-12 h-12 text-red-600"></i>
       </Link>
     </div>
           </div>
