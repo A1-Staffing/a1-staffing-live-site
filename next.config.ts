@@ -24,6 +24,11 @@ const nextConfig: NextConfig = {
         destination: "/location",
         permanent: true,
       },
+      {
+        source: "/admin-support-employment-provider-for-business-nj-near-me.html",
+        destination: "/admin-support-employment-provider-for-business-nj-near-me",
+        permanent: true,
+      },
     ];
   },
 };
