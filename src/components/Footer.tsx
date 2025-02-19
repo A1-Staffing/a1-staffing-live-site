@@ -28,10 +28,16 @@ const Footer: React.FC = () => {
               bridge to success.
             </p>
             <div className="flex mt-4 space-x-4">
-              <i className="fab fa-facebook w-12 h-12 text-blue-600"></i>
-              <i className="fab fa-x-twitter w-12 h-12 text-blue-500"></i>
-              <i className="fab fa-google w-12 h-12 text-red-600"></i>
-            </div>
+      <Link href="https://www.facebook.com/people/A1-Staffing-Pro-LLC/100084799082964/" target="_blank">
+        <i className="fab fa-facebook w-12 h-12 text-blue-600"></i>
+      </Link>
+      <Link href="https://x.com/a1staffingpro?mx=2" target="_blank">
+        <i className="fab fa-x-twitter w-12 h-12 text-blue-500"></i>
+      </Link>
+      <Link href="https://g.co/kgs/MG8Fg6a" target="_blank">
+        <i className="fas fa-google w-12 h-12 text-red-600"></i>
+      </Link>
+    </div>
           </div>
 
           {/* Quick Links */}
