@@ -65,12 +65,7 @@ const TypeOfJob: React.FC = () => {
               Call Center, Office Manager, Data Entry, Executive Assistant, and
               more.
             </p>
-            <a
-              href="#"
-              className="inline-block text-[#ffffff] hover:text-black font-bold py-2 px-4 border-2 border-[#02043f] rounded-md mt-8"
-            >
-              Read More
-            </a>
+           
           </div>
 
           {/* Card 2 */}
@@ -126,12 +121,7 @@ const TypeOfJob: React.FC = () => {
               Manufacturing, Technical, Sales, Marketing, Advertising, Human
               Resources, Legal, and more.
             </p>
-            <a
-              href="#"
-              className="inline-block text-[#ffffff] hover:text-black font-bold py-2 px-4 border-2 border-[#02043f] rounded-md mt-8"
-            >
-              Read More
-            </a>
+           
           </div>
           {/* card 4 */}
           <div
@@ -156,12 +146,7 @@ const TypeOfJob: React.FC = () => {
               HVAC Technician, Facilities Maintenance, Millwright, Pipefitter,
               Lathe Machinist, Mill Machinist, and more.
             </p>
-            <a
-              href="#"
-              className="inline-block text-[#ffffff] hover:text-black font-bold py-2 px-4 border-2 border-[#02043f] rounded-md mt-8"
-            >
-              Read More
-            </a>
+           
           </div>
           {/* caed 5  */}
           <div
@@ -186,12 +171,7 @@ const TypeOfJob: React.FC = () => {
               Painter, Procurement Clerk, Accounts Payable, Manufacturing
               Engineer, CAD Draftsman, and more.
             </p>
-            <a
-              href="#"
-              className="inline-block text-[#ffffff] hover:text-black font-bold py-2 px-4 border-2 border-[#02043f] rounded-md mt-8"
-            >
-              Read More
-            </a>
+           
           </div>
           {/* card 6 */}
           {/* <div

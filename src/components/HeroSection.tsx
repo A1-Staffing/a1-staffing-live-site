@@ -6,7 +6,7 @@ import Link from 'next/link'; // Import the Link component
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="relative w-full py-32 xl:py-32 2xl:py-36 min-h-screen">
+    <section className="relative w-full py-24 xl:py-32">
       {/* Full Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -60,19 +60,19 @@ const HeroSection: React.FC = () => {
               alt="Large Image"
               width={900} // Set image width
               height={600} // Set image height
-              className="object-contain" // Apply CSS class to control object-fit
+              className="object-contain h-[650px]" // Apply CSS class to control object-fit
             />
 
             {/* Second Image (Positioned Absolutely in Center) */}
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+            {/* <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
               <Image
                 src="/hero2-main-img.png"
                 alt="Small Image"
-                width={700} // Adjust image size as needed
-                height={700} // Adjust image size as needed
+                width={700} 
+                height={700} 
                 className="object-contain transition-all duration-500 ease-in-out"
               />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

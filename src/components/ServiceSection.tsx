@@ -66,12 +66,7 @@ const ServiceSection: React.FC = () => {
               assignments, whether lasting a week or a few months, may not be
               practical. This is where A1 Staffing Pro steps in.
             </p>
-            <a
-              href="#"
-              className="inline-block text-[#ffffff] hover:text-black font-bold py-2 px-4 border-2 border-[#02043f] rounded-md mt-8"
-            >
-              Read More
-            </a>
+           
           </div>
 
           {/* Card 2 */}
@@ -95,12 +90,7 @@ const ServiceSection: React.FC = () => {
             <p className="text-white mb-4 text-sm sm:text-base">
             A1 Staffing Pro’s unique &quot;Know Your Client&quot; approach enables our Customer Success Managers to deeply understand our clients’ needs. We thoroughly explore aspects such as required skills, management styles, personalities, company culture, team dynamics.
             </p>
-            <a
-              href="#"
-              className="inline-block text-[#ffffff] hover:text-black font-bold py-2 px-4 border-2 border-[#02043f] rounded-md mt-8"
-            >
-              Read More
-            </a>
+          
           </div>
 
           {/* Card 3 */}
@@ -124,12 +114,7 @@ const ServiceSection: React.FC = () => {
             <p className="text-white mb-4 text-justify text-sm sm:text-base">
             At A1 Staffing Pro, we offer more than just standard staffing solutions. Our Talent Acquisition Consulting services are tailored to enhance your workforce by delivering complete support throughout hiring process.
             </p>
-            <a
-              href="#"
-              className="inline-block text-[#ffffff] hover:text-black font-bold py-2 px-4 border-2 border-[#02043f] rounded-md mt-8"
-            >
-              Read More
-            </a>
+           
           </div>
         </div>
       </div>

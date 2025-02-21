@@ -87,13 +87,14 @@ const ContactUs: React.FC = () => {
           {/* Contact Cards */}
           <div className="space-y-4 pr-4 sm:pr-8">
             {/* Card 1 */}
-            <div className="flex items-center bg-[#7b7d9d] text-white p-2 w-full lg:w-96 h-28 rounded-md">
-              <div className="w-16 h-16 bg-[#d3bea8] rounded-full flex items-center justify-center mr-3">
+            <div className="flex items-center bg-[#7b7d9d] text-white p-2 w-full lg:w-96 h-28 rounded-md gap-4">
+              <div className="w-16 h-16 bg-[#02043f] rounded-full flex items-center justify-center">
                 <Image
                   src="/contact-icon1.png"
                   alt="Logo"
                   width={50}
                   height={50}
+                  className="flex justify-center items-center mt-2"
                 />
               </div>
               <div>
@@ -113,12 +114,13 @@ const ContactUs: React.FC = () => {
 
             {/* Card 2 */}
             <div className="flex items-center bg-[#7b7d9d] text-white p-2 w-full lg:w-96 h-28 rounded-md">
-              <div className="w-16 h-16 bg-[#d3bea8] rounded-full flex items-center justify-center mr-3">
+              <div className="w-16 h-16 bg-[#02043f] rounded-full flex items-center justify-center mr-3">
                 <Image
                   src="/contact-icon2.png"
                   alt="Logo"
                   width={50}
                   height={50}
+                  className="flex justify-center items-center mt-2"
                 />
               </div>
               <div>
