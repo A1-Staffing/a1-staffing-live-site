@@ -58,7 +58,7 @@ export const metadata: Metadata = {
       "A1 Staffing Pro New Jersey provides premier staffing solutions, including temporary and full-time positions, recruitment services, and expert job placement. Connect with skilled professionals and explore rewarding career opportunities with our customized hiring solutions. Discover more today.",
     images: "https://www.a1staffingpro.com/images/og-image.jpg",
   },
-}
+};
 
 const schemaData = {
   "@context": "https://schema.org",
@@ -91,8 +91,6 @@ const schemaData = {
   },
 };
 
-
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -100,6 +98,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Google Site Verification */}
+        <meta name="google-site-verification" content="9hHno7AfA5Nix83McHltebqd5gPIQnSCDvweKm_0_rA" />
+        {/* Metadata and other tags */}
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -107,8 +110,8 @@ export default function RootLayout({
         {/* Schema Markup for SEO */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-        />
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        />
       </body>
     </html>
   );
